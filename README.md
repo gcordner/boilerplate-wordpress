@@ -2,14 +2,14 @@
 
 Features:
 
-- Vanilla WordPress 5
+- Vanilla WordPress 6.6
 
 ## Setup instructions
 
 1. Clone this repo into your Projects directory
 
     ```
-    git clone https://github.com/docksal/boilerplate-wordpress.git wordpress
+    git clone https://github.com/gcordner/boilerplate-wordpress wordpress
     cd wordpress
     ```
 
@@ -24,7 +24,7 @@ Features:
 1. Point your browser to
 
     ```
-    http://wordpress.docksal
+    http://wordpress.docksal.site
     ```
     
 ## Install phpcs
