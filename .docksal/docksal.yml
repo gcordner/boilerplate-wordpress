@@ -11,3 +11,12 @@ services:
       - WP_ADMIN_USER
       - WP_ADMIN_PASS
       - WP_ADMIN_EMAIL
+
+# Add Adminer service
+  adminer:
+    image: adminer:latest
+    ports:
+      - "8080:8080" # Adjust fhe first port number if you have another service using 8080
+    environment:
+      # Optional: Set some Adminer options
+      ADMINER_DEFAULT_SERVER: db # This refers to your database service name
