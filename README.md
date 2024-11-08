@@ -40,6 +40,33 @@ Features:
     ie:
        ports:
       - "8080:8080" # Adjust fhe first port number if you have another service using 8080
+  
+## phpcs
+
+1. Run
+
+    ```
+    fin exec composer install
+    ```
+   
+    or:
+
+   ```
+   fin bash
+   composer install
+   ```
+1. Verify that phpcs recognizes the WordPress coding standards by running:
+
+   ```
+   fin phpcs -i
+
+   ```
+1. Now you should be able to run phpcs from anywhere, BUT... first you need to get in the cli, so run:
+
+   ```
+   fin bash
+   phpcs --standard="WordPress" functions.php
+   ```
  
 
 ## Install phpcs
