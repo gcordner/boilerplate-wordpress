@@ -2,6 +2,7 @@ version: "2.1"
 
 services:
   cli:
+    image: docksal/cli:php8.2
     environment:
       # Pass additional variables (used in custom commands, e.g. init-site) from host to cli
       - MYSQL_ROOT_PASSWORD
@@ -13,13 +14,15 @@ services:
       - WP_ADMIN_EMAIL
     volumes:
       - ${PROJECT_ROOT}:/var/www
-    # Removed custom command to avoid issues with container initialization
+    command: >
+      bash -c "/var/www/.docksal/startup.sh &&
+      tail -f /dev/null"
 
 # Add Adminer service
   adminer:
     image: adminer:latest
     ports:
-      - "8080:8080" # Adjust the first port number if you have another service using 8080
+      - "8081:8080" # Adjust the first port number if you have another service using 8080
     environment:
       # Optional: Set some Adminer options
       ADMINER_DEFAULT_SERVER: db # This refers to your database service name
