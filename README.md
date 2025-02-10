@@ -65,7 +65,8 @@ Features:
 1. From the root directory, run
    
    ```
-   vendor/bin/phpcs --config-set installed_paths /var/www/vendor/wp-coding-standards/wpcs
+   vendor/bin/phpcs --config-set installed_paths /var/www/vendor/phpcsstandards/phpcsutils,/var/www/vendor/phpcsstandards/phpcsextra,/var/www/vendor/wp-coding-standards/wpcs
+
    ```
    
 1. Now you should be able to run phpcs from anywhere, BUT... first you need to get in the cli, so run:
